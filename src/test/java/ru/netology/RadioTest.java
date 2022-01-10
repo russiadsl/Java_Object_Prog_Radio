@@ -55,12 +55,36 @@ public class RadioTest {
     }
 
     @Test
+    public void testIncreaseStationInRange() {
+        Radio radio = new Radio();
+
+        radio.increaseStation(5);
+
+        int expected = 6;
+        int actual = radio.getCurrentStation();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void testDecreaseStation() {
         Radio radio = new Radio();
 
         radio.decreaseStation(1);
 
         int expected = 1;
+        int actual = radio.getCurrentStation();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDecreaseStationInRange() {
+        Radio radio = new Radio();
+
+        radio.decreaseStation(5);
+
+        int expected = 4;
         int actual = radio.getCurrentStation();
 
         assertEquals(expected, actual);
@@ -127,12 +151,36 @@ public class RadioTest {
     }
 
     @Test
+    public void testIncreaseVolumeInRange() {
+        Radio radio = new Radio();
+
+        radio.increaseVolume(5);
+
+        int expected = 6;
+        int actual = radio.getCurrentVolume();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void testDecreaseVolume() {
         Radio radio = new Radio();
 
         radio.decreaseVolume(0);
 
         int expected = 0;
+        int actual = radio.getCurrentVolume();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDecreaseVolumeInRange() {
+        Radio radio = new Radio();
+
+        radio.decreaseVolume(5);
+
+        int expected = 4;
         int actual = radio.getCurrentVolume();
 
         assertEquals(expected, actual);
