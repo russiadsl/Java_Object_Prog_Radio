@@ -24,13 +24,31 @@ public class Radio {
     public void increaseStation() {
         if (currentStation == maxStation) {
             currentStation = minStation;
-        } else currentStation = currentStation + 1;
+            return;
+        }
+        if (currentStation > maxStation) {
+            currentStation = minStation;
+            return;
+        }
+        if (currentStation < minStation) {
+            currentStation = minStation;
+        }
+        else this.currentStation = currentStation + 1;
     }
 
     public void decreaseStation() {
-        if (currentStation > minStation) {
-            currentStation = currentStation - 1;
-        } else currentStation = maxStation;
+        if (currentStation == minStation) {
+            currentStation = maxStation;
+            return;
+        }
+        if (currentStation < minStation) {
+            currentStation = maxStation;
+            return;
+        }
+        if (currentStation > maxStation) {
+            currentStation = maxStation;
+        }
+        else currentStation = currentStation - 1;
     }
 
 
