@@ -10,15 +10,15 @@ public class RadioTest {
 
     @Test
     public void testSetNewStation() {
-        Radio radio = new Radio (6);
 
+        Radio radio = new Radio (6, 9);
         assertEquals(6, radio.getCurrentStation());
     }
 
     @Test
     public void testIncreaseStation11() {
 
-        Radio radio = new Radio (11);
+        Radio radio = new Radio (11, 9);
         radio.increaseStation();
 
         assertEquals(0, radio.getCurrentStation());
@@ -27,8 +27,9 @@ public class RadioTest {
     @Test
     public void testIncreaseStationMinus50() {
 
-        Radio radio = new Radio (-50);
+        Radio radio = new Radio (-50, 9);
         radio.increaseStation();
+
 
         assertEquals(0, radio.getCurrentStation());
     }
@@ -36,7 +37,7 @@ public class RadioTest {
     @Test
     public void testIncreaseStation0() {
 
-        Radio radio = new Radio (0);
+        Radio radio = new Radio (0, 9);
         radio.increaseStation();
 
         assertEquals(1, radio.getCurrentStation());
@@ -45,7 +46,7 @@ public class RadioTest {
     @Test
     public void testIncreaseStation1() {
 
-        Radio radio = new Radio (1);
+        Radio radio = new Radio (1, 9);
         radio.increaseStation();
 
         assertEquals(2, radio.getCurrentStation());
@@ -53,7 +54,7 @@ public class RadioTest {
 
     @Test
     public void testIncreaseStation2() {
-        Radio radio = new Radio (2);
+        Radio radio = new Radio (2, 9);
         radio.increaseStation();
 
         assertEquals(3, radio.getCurrentStation());
@@ -62,7 +63,7 @@ public class RadioTest {
     @Test
     public void testIncreaseStation3() {
 
-        Radio radio = new Radio (3);
+        Radio radio = new Radio (3, 9);
         radio.increaseStation();
 
         assertEquals(4, radio.getCurrentStation());
@@ -71,7 +72,7 @@ public class RadioTest {
     @Test
     public void testIncreaseStation4() {
 
-        Radio radio = new Radio (4);
+        Radio radio = new Radio (4, 9);
         radio.increaseStation();
 
         assertEquals(5, radio.getCurrentStation());
@@ -80,7 +81,7 @@ public class RadioTest {
     @Test
     public void testIncreaseStation5() {
 
-        Radio radio = new Radio (5);
+        Radio radio = new Radio (5, 9);
         radio.increaseStation();
 
         assertEquals(6, radio.getCurrentStation());
@@ -89,7 +90,7 @@ public class RadioTest {
     @Test
     public void testIncreaseStation6() {
 
-        Radio radio = new Radio (6);
+        Radio radio = new Radio (6, 9);
         radio.increaseStation();
 
         assertEquals(7, radio.getCurrentStation());
@@ -98,7 +99,7 @@ public class RadioTest {
     @Test
     public void testIncreaseStation7() {
 
-        Radio radio = new Radio (7);
+        Radio radio = new Radio (7, 9);
         radio.increaseStation();
 
         assertEquals(8, radio.getCurrentStation());
@@ -107,7 +108,7 @@ public class RadioTest {
     @Test
     public void testIncreaseStation8() {
 
-        Radio radio = new Radio (8);
+        Radio radio = new Radio (8, 9);
         radio.increaseStation();
 
         assertEquals(9, radio.getCurrentStation());
@@ -116,7 +117,7 @@ public class RadioTest {
     @Test
     public void testIncreaseStation9() {
 
-        Radio radio = new Radio (9);
+        Radio radio = new Radio (9, 9);
         radio.increaseStation();
 
         assertEquals(0, radio.getCurrentStation());
@@ -125,7 +126,7 @@ public class RadioTest {
     @Test
     public void testIncreaseStation50() {
 
-        Radio radio = new Radio (50);
+        Radio radio = new Radio (50, 9);
         radio.increaseStation();
 
         assertEquals(0, radio.getCurrentStation());
@@ -134,7 +135,7 @@ public class RadioTest {
     @Test
     public void testDecreaseStation35() {
 
-        Radio radio = new Radio(35);
+        Radio radio = new Radio(35, 9);
         radio.decreaseStation();
 
         assertEquals(9, radio.getCurrentStation());
@@ -143,7 +144,7 @@ public class RadioTest {
     @Test
     public void testDecreaseStation9() {
 
-        Radio radio = new Radio(9);
+        Radio radio = new Radio(9, 9);
         radio.decreaseStation();
 
         assertEquals(8, radio.getCurrentStation());
@@ -152,7 +153,7 @@ public class RadioTest {
     @Test
     public void testDecreaseStation8() {
 
-        Radio radio = new Radio(8);
+        Radio radio = new Radio(8, 9);
         radio.decreaseStation();
 
         assertEquals(7, radio.getCurrentStation());
@@ -161,7 +162,7 @@ public class RadioTest {
     @Test
     public void testDecreaseStation7() {
 
-        Radio radio = new Radio(7);
+        Radio radio = new Radio(7, 9);
         radio.decreaseStation();
 
         assertEquals(6, radio.getCurrentStation());
@@ -170,7 +171,7 @@ public class RadioTest {
     @Test
     public void testDecreaseStation6() {
 
-        Radio radio = new Radio(6);
+        Radio radio = new Radio(6, 9);
         radio.decreaseStation();
 
         assertEquals(5, radio.getCurrentStation());
@@ -179,7 +180,7 @@ public class RadioTest {
     @Test
     public void testDecreaseStation5() {
 
-        Radio radio = new Radio(5);
+        Radio radio = new Radio(5, 9);
         radio.decreaseStation();
 
         assertEquals(4, radio.getCurrentStation());
@@ -188,7 +189,7 @@ public class RadioTest {
     @Test
     public void testDecreaseStation4() {
 
-        Radio radio = new Radio(4);
+        Radio radio = new Radio(4, 9);
         radio.decreaseStation();
 
         assertEquals(3, radio.getCurrentStation());
@@ -197,7 +198,7 @@ public class RadioTest {
     @Test
     public void testDecreaseStation3() {
 
-        Radio radio = new Radio(3);
+        Radio radio = new Radio(3, 9);
         radio.decreaseStation();
 
         assertEquals(2, radio.getCurrentStation());
@@ -206,7 +207,7 @@ public class RadioTest {
     @Test
     public void testDecreaseStation2() {
 
-        Radio radio = new Radio(2);
+        Radio radio = new Radio(2, 9);
         radio.decreaseStation();
 
         assertEquals(1, radio.getCurrentStation());
@@ -215,7 +216,7 @@ public class RadioTest {
     @Test
     public void testDecreaseStation1() {
 
-        Radio radio = new Radio(1);
+        Radio radio = new Radio(1, 9);
         radio.decreaseStation();
 
         assertEquals(0, radio.getCurrentStation());
@@ -224,7 +225,7 @@ public class RadioTest {
     @Test
     public void testDecreaseStation0() {
 
-        Radio radio = new Radio(0);
+        Radio radio = new Radio(0, 9);
         radio.decreaseStation();
 
         assertEquals(9, radio.getCurrentStation());
@@ -233,7 +234,7 @@ public class RadioTest {
     @Test
     public void testDecreaseStationMinus50() {
 
-        Radio radio = new Radio(-50);
+        Radio radio = new Radio(-50, 9);
         radio.decreaseStation();
 
         assertEquals(9, radio.getCurrentStation());
