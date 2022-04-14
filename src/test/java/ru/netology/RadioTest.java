@@ -9,12 +9,21 @@ public class RadioTest {
     Radio radio = new Radio();
 
     @Test
-    public void testIncreaseStation15() {
+    public void testIncreaseStation10() {
 
         Radio radio = new Radio(9);
-        radio.increaseStation(15);
+        radio.increaseStation(10);
 
         assertEquals(0, radio.getCurrentStation());
+    }
+
+    @Test
+    public void testIncreaseStation4() {
+
+        Radio radio = new Radio(9);
+        radio.increaseStation(5);
+
+        assertEquals(6, radio.getCurrentStation());
     }
 
     @Test
@@ -29,7 +38,7 @@ public class RadioTest {
     @Test
     public void testIncreaseStation20() {
 
-        Radio radio = new Radio(20);
+        Radio radio = new Radio(1);
         radio.increaseStation(20);
 
         assertEquals(0, radio.getCurrentStation());
@@ -61,7 +70,7 @@ public class RadioTest {
         Radio radio = new Radio(9);
         radio.decreaseStation(0);
 
-        assertEquals(9, radio.getCurrentStation());
+        assertEquals(10, radio.getCurrentStation());
 
     }
 
